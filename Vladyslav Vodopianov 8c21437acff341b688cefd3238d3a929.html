@@ -1,0 +1,680 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Vladyslav Vodopianov</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8c21437a-cff3-41b6-88ce-fd3238d3a929" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">📋</span></div><h1 class="page-title">Vladyslav Vodopianov</h1></header><div class="page-body"><hr id="ba56f470-ba1f-431f-9019-797d57ba325e"/><div id="184c3330-117e-4d91-bf2c-badfd704a70e" class="column-list"><div id="337d8f3b-739c-4bc2-9084-2aea6f2cf670" style="width:25%" class="column"><figure id="f367bbf0-f753-439e-854d-50b3c79935d1" class="image"><a href="Vladyslav%20Vodopianov%208c21437acff341b688cefd3238d3a929/photo_2022-02-17_12-59-05.jpg"><img style="width:132px" src="Vladyslav%20Vodopianov%208c21437acff341b688cefd3238d3a929/photo_2022-02-17_12-59-05.jpg"/></a></figure></div><div id="79f00f43-4603-45ed-bd6e-4f75073bbc44" style="width:50%" class="column"><h2 id="1d92e402-a056-40eb-b379-f4f29d5756d6" class="">Contacts</h2><p id="82a09e64-19a9-419b-964a-822a3fb0effa" class=""><a href="mailto:vodvlad2001@gmail.com">📧 vodvlad2001@gmail.com</a></p><p id="350f6cd3-658c-4271-9494-7f77bbdb9eb0" class=""><a href="tel:+421951196951">📞 +421951196951</a></p><p id="7db664ef-75ec-4400-a070-14483551b9b8" class=""><a href="https://www.linkedin.com/in/vladyslav-vodopianov/">🔗 linkedin.com/in/vladyslav-vodopianov</a></p><p id="0e023603-0196-484c-9a70-722a3c181c98" class=""><a href="https://github.com/vodvlad">👾 github.com/vodvlad</a></p></div><div id="df963dd9-c637-465c-9700-c9818b7d5986" style="width:25%" class="column"><p id="971ece20-27f0-4ce9-ab10-b7d93c016e95" class="">
+</p></div></div><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8682472a-892e-4b15-85f4-b50fd15319ce"><div style="font-size:1.5em"><span class="icon">👋</span></div><div style="width:100%">I am a student of a technical university of Kosice, looking for a job that can be combined with study. In the process of working, I want to learn something and gain experience.</div></figure><p id="3960a4ab-3265-48e8-8757-97798ac54f33" class="">
+</p><hr id="7c0ead63-a266-4606-976f-924b03bb2c78"/><div id="a92d1795-e106-4356-8b65-607ff92facda" class="column-list"><div id="e8fa7aa4-e37a-4b5a-90fb-cacb98815033" style="width:93.75%" class="column"><h1 id="fd9115f8-ccdd-439c-9df3-0c03d1098e38" class="">About me</h1><p id="bc551a88-47ef-4b2e-be45-4f93d3c0c45b" class="">I am a Ukrainian student currently living and studying in Kosice, Slovakia. I am pursuing a technical degree in Computer Science, specializing in Neural networks at a technical university. I am seeking a part-time job as a programmer that can be combined with my studies. I am highly motivated to learn new technologies and gain practical experience in the field of computer science and artificial intelligence. I am proficient in programming languages such as Java, Python, and JavaScript.</p><p id="e22615b2-1661-4047-a538-4fd42252500f" class="">My language skills include intermediate English and good knowledge of Slovak, which allows me to communicate effectively with team members. I am a team player and able to work independently. I am eager to learn and gain experience, which makes me a valuable asset to any team. I am confident that my skills and knowledge will be an asset to any employer. I am particularly interested in finding a job related to my favorite programming languages.</p></div><div id="22606fad-2071-4d4b-b953-671c7c14de93" style="width:6.2500000000000195%" class="column"><p id="abaaabe7-54f7-4ba5-aed7-382ec9f7a88c" class="">
+</p></div></div><h1 id="c13628a4-c0dc-4f38-9b44-a5bdec7c53c0" class="">My projects and experience</h1><h3 id="2ef56ef1-d9db-4f08-aa96-9439187bb118" class=""><strong><a href="https://github.com/vodvlad/Party-Games">Let&#x27;s have a party</a></strong></h3><p id="2f6d5259-ceaf-4366-b55b-0b14adc20572" class=""><strong>Android application</strong></p><p id="4116cdf2-00ac-4ed4-8918-ae7309760e8a" class="block-color-gray"><em><strong>Java language</strong></em><em>, Kosice, Slovakia</em></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="42144291-aeb3-406a-b770-6afa3fce2d2e"><div style="font-size:1.5em"><span class="icon">⚙</span></div><div style="width:100%">Let&#x27;s have a party is a personal project and it is an android application written in Java using the Android SDK. The main focus of the application is a game called &quot;truth or dare&quot; that can be played with a group of friends. The goal is to have fun and enjoy the game in a group setting. Additionally, plans are in place to add more games to the party pack in the future, expanding the number of games that can be played and enjoyed by users.</div></figure><p id="4885fe25-6ba9-4b06-9baa-842374aebc36" class="">
+</p><h3 id="2adfd6d0-2483-45a1-a90f-8320fb8bc1a4" class=""><strong><a href="https://github.com/vodvlad/Java-login-with-mysql">Java login with MySQL</a></strong></h3><p id="eaec4085-9e7b-4400-876f-b778e4c2727a" class=""><strong>Windows application</strong></p><p id="c62d9a0c-cb93-41d5-bedf-61fcd19e2f5d" class="block-color-gray"><em><strong>Java language</strong></em><em>, Kosice, Slovakia</em></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e29e8437-ee8f-4f85-a6c1-076a49ae34d5"><div style="font-size:1.5em"><span class="icon">⚙</span></div><div style="width:100%">Java login with<strong> </strong>MySQL is a personal project and it&#x27;s implemented using Java language. The main purpose of the project is to build a simple authorization system that allows users to register and log in. The system uses a MySQL database to store user information and handle authentication. The project aims to provide a basic login and registration feature that can be integrated into other applications and systems.</div></figure><p id="c978a20c-1ff4-49e9-8b01-c3308ffcc39c" class="">
+</p><h3 id="5184986c-12bc-4867-bfb3-887854a46804" class=""><a href="https://github.com/vodvlad/Search-for-books-and-authors-by-api-request"><strong>Search for books and authors by API request</strong></a></h3><p id="53dea482-9b4c-49f2-9e2e-9c3bba37713d" class=""><strong>Windows CLI application</strong></p><p id="65ecd26d-6d97-4463-8b18-a77d5bcab2f1" class="block-color-gray"><em><strong>Go Lang</strong></em><em>, Kosice, Slovakia</em></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="528b4429-1a82-4982-b6b0-e13aa66bb6ae"><div style="font-size:1.5em"><span class="icon">⚙</span></div><div style="width:100%">Search for books and authors by API request is an application that is written in the Go programming language. It makes API requests to the &quot;<a href="https://openlibrary.org/"><strong>https://openlibrary.org/</strong></a>&quot; website to search for books and authors. With this application, users can find detailed information about books including the author&#x27;s name, the year the book was published, and the languages in which the book is available. Additionally, it also provides information about the authors such as the author&#x27;s bio, their works, and other relevant details. The project aims to provide an easy-to-use tool for searching books and authors, and retrieving detailed information about them.</div></figure><p id="2596521b-a21d-4ee1-8460-5d38dafa8bff" class="">
+</p><h3 id="cba6f458-73fb-492f-8a35-d52e27b79702" class=""><strong><a href="https://github.com/vodvlad/find-a-qr-code">Smart QR-code scanner</a></strong></h3><p id="b533f616-c18a-4fbb-8968-e57acd769bea" class=""><strong>Windows CLI application</strong></p><p id="1234e4a5-5a1b-4ae9-967a-403680f54a69" class="block-color-gray"><strong><em>Python</em></strong><em>, Kosice, Slovakia</em></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="b0764344-6c7b-4c24-a1d4-0392bb8fcbb7"><div style="font-size:1.5em"><span class="icon">⚙</span></div><div style="width:100%">Smart QR-code scanner is a personal project, an application that uses a neural network to detect QR codes on images of grocery receipts. The application processes the image of a receipt and uses the neural network to locate the QR code on the image, it then automatically cuts out the QR code from the image and aligns it regardless of the angle at which the receipt was positioned when the image was taken. This project aims to automate the process of extracting QR codes from images of receipts, making it faster and more accurate. It allows users to quickly and easily scan QR codes without the need for manual cropping or alignment.</div></figure><h3 id="8a825b3e-e07e-4763-b85d-77db77df3700" class=""><strong><a href="https://github.com/vodvlad/poisoned_mushrooms">Mushroom Classifier</a></strong></h3><p id="b77dd40a-0764-4774-a464-170a1bd7a4b5" class=""><strong>Windows application</strong></p><p id="c3ed85fb-ad1c-440a-aec9-da8a28079a0f" class="block-color-gray"><strong><em>Python</em></strong><em>, Kosice, Slovakia</em></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="90b25b21-ce45-40f7-a71e-2b4297e13451"><div style="font-size:1.5em"><span class="icon">⚙</span></div><div style="width:100%">Mushroom Classifier is a program that uses a Naive Bayes classifier to determine the edibility of a mushroom based on its description. The program is trained on a dataset of mushroom descriptions, which includes information about the mushroom&#x27;s characteristics such as its shape, color, and habitat. The Naive Bayes classifier uses this information to calculate the probability that a mushroom is edible. This project aims to provide a tool for mushroom hunters, who want to know quickly whether the mushroom they found is edible or not, by just providing a description of it. It&#x27;s a simple and efficient way to classify mushroom based on the features of the mushroom and its features.</div></figure><h3 id="8c7d748c-543b-43f8-a63f-bd280bcd6702" class=""><strong><a href="https://github.com/vodvlad/how-many-skittles">Skittle Counter</a></strong></h3><p id="75cca615-cbd3-47a9-ab3d-952b2198fca0" class=""><strong>Windows CLI application</strong></p><p id="81617d4d-2d56-473b-9178-a76a4c2a8818" class="block-color-gray"><strong><em>Python</em></strong><em>, Kosice, Slovakia</em></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="053045dc-e97b-49c3-9abd-81adf5c9f475"><div style="font-size:1.5em"><span class="icon">⚙</span></div><div style="width:100%">Skittle Counter is a personal project that uses a neural network, image processing techniques, and libraries such as cv2 and scikit-image to count the number of Skittles in an image by color, without the need for a training dataset. The image processing techniques are used to extract features from the images such as color that are used as inputs for the neural network. The network can then analyze an image of Skittles and accurately count the number of each color present. The goal of this project is to develop a simple and efficient tool that can quickly count the number of Skittles in an image by color, without the need for manual counting or training on a dataset. This could be useful in a manufacturing or packaging setting, where monitoring the number of Skittles of each color in a batch could be important.</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f2c7b33f-6ca5-482b-9443-27d16e248d42"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Other projects you can see on my <em><a href="https://github.com/vodvlad">github</a></em> page.</div></figure><p id="d68ba3f5-4486-4873-b7a1-ad23177aaedb" class="">
+</p><hr id="ec2b8c91-059e-4f6b-89b0-6c2a097aef59"/><h1 id="393ed0d9-22bc-4bdb-ba77-9d2b51862c74" class="">Skills</h1><h3 id="82567b14-edfb-49b3-afeb-4e1bfea224cd" class="">Java ⭐⭐⭐⭐_</h3><p id="9bc8f6ce-4262-4174-89f4-f7137e47ffff" class="">In my experience as a software developer, I have had the opportunity to work with a variety of programming languages, and I have found that Java is one of my favorites. I have a strong understanding of the language, including its syntax, data types and core libraries. I have experience working on various projects that have been developed using Java, and I have enjoyed working with the language for its readability, maintainability, and platform independence. I am confident that my skills and experience in Java will enable me to contribute to the success of any project that requires it.</p><h3 id="900eb8eb-f6e5-424a-9f3c-653647468f5c" class="">Python ⭐⭐⭐⭐_</h3><p id="2ce09ea7-5e25-4f99-865c-0f2f41160ca4" class="">In my free time, I enjoy writing programs using Python. It is my favorite programming language and I find it to be intuitive and easy to use. I have a good understanding of the language&#x27;s syntax and libraries. I have written a number of programs for personal use. I am able to quickly write and implement programs to meet my domestic needs. My proficiency in Python and ability to write programs efficiently, could be an asset to any organization looking for someone who can quickly develop solutions to problems using Python.</p><h3 id="69462913-85a5-44de-b4fe-9f5c1bc23605" class="">Git ⭐⭐⭐_ _</h3><p id="d34d6e09-21aa-47f8-839f-7768e124a34b" class="">I am currently familiar with the basic concepts of Git and have used it for version control in my personal projects. However, I have not yet had the opportunity to use it in a team setting. I am eager to gain experience in using Git for collaborative software development and would like to try working with it in a team environment.</p><h3 id="137569ff-cdfa-4a61-a6ab-5801448e52a6" class="">HTML &amp; CSS ⭐⭐⭐_ _</h3><p id="66b0b24d-08de-4525-ade7-3051f44440f4" class="">I have experience working with the basics of HTML and CSS for layout and design. I am familiar with HTML tags, syntax and its use in creating structured documents. I am also familiar with the basics of CSS, including the use of selectors, properties and values to style and layout HTML elements. I have experience creating basic layouts for websites and have been able to use CSS to customize the look and feel of my web pages.</p><h3 id="9dd0d295-0c28-4071-9b59-62546590eec8" class="">MySQL ⭐⭐_ _ _</h3><p id="76add17b-a588-4f08-8005-ccf01608d361" class="">I have experience working with databases, specifically with a couple of projects that utilized a MySQL database. While I am familiar with the basic concepts and have successfully implemented projects using it, I would like to expand my knowledge and skills. I am eager to learn and adapt to new technologies, and I believe that learning other databases would broaden my skill set and make me a more valuable asset to any organization. I am open to any opportunity that allows me to gain experience in other databases and to develop my skills in database management.</p><p id="6c8167c8-2286-4ffc-832b-c4753570fa5f" class="">
+</p><p id="86f40d88-bc06-4a09-9766-df092d8f1d3d" class="">
+</p><hr id="2243d2cb-d0e5-4039-a3fb-638156121111"/><h1 id="1ac10b83-5b58-46cb-ad83-420d5c8cf171" class="">Languages</h1><h3 id="365e4e54-c2be-4c8c-8c4d-5bc9dd1d501d" class="">English 🇺🇸</h3><p id="aee1ee1d-5e98-4f4e-bcdc-001637afeaca" class="">I am proficient in English with an approximate level of A2. I have a good vocabulary, and I am able to understand spoken English. However, when it comes to spoken communication, I find it challenging to use the language fluently and may make mistakes when constructing sentences and speaking. Despite this, I am committed to improving my speaking skills and am willing to take the necessary steps to overcome this difficulty. I understand the importance of clear and effective spoken communication in a programming work setting, and I am motivated to improve my ability to speak in English.</p><h3 id="5a14c2df-7065-44ca-8ac7-708f3a3db502" class="">Slovak 🇸🇰</h3><p id="f0c1d98c-0f53-419e-862f-89e8a28d7472" class="">I have spent a significant amount of time in Slovakia and have become fluent in the Slovak language. I am able to easily understand and communicate in Slovak, both in spoken and written forms.</p><h3 id="53dc54e0-18fe-4719-bfa3-0d51ff4eeefe" class="">Ukrainian 🇺🇦</h3><p id="63e45740-5e1a-4015-87e5-1662e4ee6c8c" class="">My native language.</p><p id="beedcc95-5c9f-4bd3-8f62-f6273fa3fae8" class="">
+</p><hr id="ca321f05-d821-4ece-a554-fbb99b9f2c52"/><h1 id="a3bea9ec-2bd3-4235-8827-14226d748507" class="">Education</h1><ul id="7f7a953c-c0dc-4cd5-a93f-6351dba50bd4" class="toggle"><li><details open=""><summary><strong>Bachelor&#x27;s Degree in Neural Networks</strong></summary><p id="1f3f7c20-659a-41a1-8e8f-c3e369b86c74" class="">Technical University of Kosice<div class="indented"><p id="af4578bf-1ad5-4529-9b33-8c24379214e8" class=""><mark class="highlight-gray"><em>2019 (current university)</em></mark></p><p id="5fbfa03a-9454-4eac-bcb0-ba0a1ef7a662" class="">Kosice, Slovakia</p></div></p></details></li></ul><p id="56043828-0189-4ca6-90be-9299cb833084" class="block-color-gray">
+</p><hr id="3c2a5609-4998-4072-a2e3-a4129cecbb49"/><h1 id="2dd18d7f-f4e4-4ca9-b6c3-c9235a1b22c1" class="">Contacts</h1><p id="4c8432c3-c379-4fbd-b09b-db1854793257" class=""><a href="mailto:vodvlad2001@gmail.com">📧 vodvlad2001@gmail.com</a></p><p id="61e02a61-0d89-4799-93b8-75f2cb9a2842" class=""><a href="tel:+421951196951">📞 +421951196951</a></p><p id="5752d61a-7d8f-417e-a753-47c82a842229" class=""><a href="https://www.linkedin.com/in/vladyslav-vodopianov/">🔗 linkedin.com/in/vladyslav-vodopianov</a></p><p id="1cbd7d34-af64-4b46-88aa-19f683938d5c" class=""><a href="https://github.com/vodvlad">👾 github.com/vodvlad</a></p></div></article></body></html>
